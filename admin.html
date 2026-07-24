@@ -1,1 +1,768 @@
 
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+          <style>
+            /* Default background set to #ffffff (white) to ensure text is visible if the AI doesn't specify a dark theme */
+            body { background-color: #ffffff; color: #000000; margin: 0; padding: 24px; font-family: system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+            ::-webkit-scrollbar { display: none; }
+          </style>
+        </head>
+        <body>
+          <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIDER-SHOP | Thwip Your Style</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        comic: ['Bangers', 'cursive'],
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        spideyRed: '#e21b22',
+                        spideyBlue: '#005a9c',
+                        spideyDarkBlue: '#091a5e',
+                        symbioteBlack: '#0d0d11',
+                        gwenPink: '#ff007f',
+                        gwenTeal: '#00f0ff',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 4s ease-in-out infinite',
+                        'float-delayed': 'float 4s ease-in-out infinite 2s',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+                            '50%': { transform: 'translateY(-15px) rotate(2deg)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Web Background Pattern */
+        .web-pattern {
+            background-color: #0d0d11;
+            background-image: 
+                radial-gradient(circle at 50% 50%, transparent 60%, #0d0d11 95%),
+                radial-gradient(rgba(226, 27, 34, 0.15) 1px, transparent 0),
+                radial-gradient(rgba(0, 90, 156, 0.15) 2px, transparent 0);
+            background-size: 100% 100%, 40px 40px, 60px 60px;
+        }
+
+        .comic-border {
+            border: 4px solid #000;
+            box-shadow: 8px 8px 0px #000;
+        }
+
+        .comic-border-sm {
+            border: 3px solid #000;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        .comic-shadow-red {
+            box-shadow: 8px 8px 0px #e21b22;
+        }
+
+        .comic-shadow-blue {
+            box-shadow: 8px 8px 0px #005a9c;
+        }
+
+        /* Thwip particle styling */
+        .thwip-particle {
+            position: absolute;
+            pointer-events: none;
+            animation: thwipOut 0.8s ease-out forwards;
+            font-family: 'Bangers', cursive;
+            font-size: 1.5rem;
+            z-index: 9999;
+        }
+
+        @keyframes thwipOut {
+            0% {
+                transform: translate(-50%, -50%) scale(0.3) rotate(-15deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -120%) scale(1.5) rotate(15deg);
+                opacity: 0;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d11;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #e21b22;
+            border: 3px solid #0d0d11;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #005a9c;
+        }
+    </style>
+</head>
+<body class="web-pattern text-white font-sans overflow-x-hidden selection:bg-spideyRed selection:text-white">
+
+    <!-- SPIDEY SENSE ALERTER / TOP BAR -->
+    <div class="bg-spideyRed text-black border-b-4 border-black font-comic tracking-wider text-lg py-2 overflow-hidden relative z-50">
+        <div class="flex whitespace-nowrap animate-marquee">
+            <span class="mx-4"><i class="fa-solid fa-triangle-exclamation"></i> WARNING: SPIDEY-SENSES ARE TINGLING! 50% OFF ALL WEB-SHOOTER ACCESSORIES!</span>
+            <span class="mx-4"><i class="fa-solid fa-spider"></i> NEW MILES MORALES STREETWEAR DROP IS NOW LIVE!</span>
+            <span class="mx-4"><i class="fa-solid fa-shield-halved"></i> DAILY BUGLE EXCLUSIVE: "IS SPIDER-MAN CLOTHING DESTROYING PUBLIC DECENT LOOKS?"</span>
+            <!-- Repeat for seamless scroll -->
+            <span class="mx-4"><i class="fa-solid fa-triangle-exclamation"></i> WARNING: SPIDEY-SENSES ARE TINGLING! 50% OFF ALL WEB-SHOOTER ACCESSORIES!</span>
+            <span class="mx-4"><i class="fa-solid fa-spider"></i> NEW MILES MORALES STREETWEAR DROP IS NOW LIVE!</span>
+            <span class="mx-4"><i class="fa-solid fa-shield-halved"></i> DAILY BUGLE EXCLUSIVE: "IS SPIDER-MAN CLOTHING DESTROYING PUBLIC DECENT LOOKS?"</span>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="sticky top-0 z-40 bg-symbioteBlack/90 backdrop-blur-md border-b-4 border-black px-4 lg:px-8 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="bg-spideyRed p-2 rounded-lg border-2 border-black transform group-hover:rotate-12 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-white fill-current" viewBox="0 0 24 24">
+                        <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A1,1 0 0,1 13,5C13,5.8 12.1,7 12,7C11.9,7 11,5.8 11,5A1,1 0 0,1 12,4M12,18C11,18 9.5,17 9.5,15.5C9.5,14 11,13 12,13C13,13 14.5,14 14.5,15.5C14.5,17 13,18 12,18M16.5,14.5C15.5,14.5 13.5,12 13.5,10.5C13.5,9 15.5,9 16.5,9C17.5,9 18.5,10.5 18.5,11.5C18.5,13 17.5,14.5 16.5,14.5M7.5,14.5C6.5,14.5 5.5,13 5.5,11.5C5.5,10.5 6.5,9 7.5,9C8.5,9 10.5,9 10.5,10.5C10.5,12 8.5,14.5 7.5,14.5Z"/>
+                    </svg>
+                </div>
+                <div class="leading-none">
+                    <span class="font-comic text-3xl md:text-4xl tracking-wider text-spideyRed block">SPIDER-SHOP</span>
+                    <span class="text-xs uppercase font-bold tracking-widest text-spideyBlue">Multiverse Wear</span>
+                </div>
+            </a>
+
+            <!-- Nav Links - Desktop -->
+            <nav class="hidden lg:flex items-center gap-6 font-comic text-xl tracking-wide">
+                <a href="#suits" class="hover:text-spideyRed transition-colors hover:underline decoration-4">SUITS & REPLICAS</a>
+                <a href="#hoodies" class="hover:text-spideyRed transition-colors hover:underline decoration-4">THWIP HOODIES</a>
+                <a href="#streetwear" class="hover:text-spideyRed transition-colors hover:underline decoration-4">STREETWEAR</a>
+                <a href="#accessories" class="hover:text-spideyRed transition-colors hover:underline decoration-4">ACCESSORIES</a>
+                <a href="#bugle" class="text-yellow-400 hover:text-yellow-300 transition-colors">THE DAILY BUGLE</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <!-- Search bar (styled comic-ly) -->
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search Spidey Gear..." class="bg-black text-white border-2 border-white px-4 py-1 rounded focus:outline-none focus:border-spideyRed font-comic placeholder:text-gray-500">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-gray-400"></i>
+                </div>
+                <!-- Cart -->
+                <button onclick="toggleCart()" class="relative bg-spideyBlue p-3 rounded-full border-2 border-black hover:bg-spideyRed transition-all duration-200 transform hover:scale-110 active:scale-95 comic-border-sm">
+                    <i class="fa-solid fa-basket-shopping text-lg"></i>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-yellow-400 text-black border-2 border-black font-comic text-sm px-1.5 rounded-full">3</span>
+                </button>
+                <!-- Mobile Nav Toggle -->
+                <button onclick="toggleMobileMenu()" class="lg:hidden bg-spideyRed p-3 rounded border-2 border-black comic-border-sm">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50 bg-black/95 flex flex-col justify-center items-center gap-8 font-comic text-3xl">
+        <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-spideyRed text-4xl">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#suits" onclick="toggleMobileMenu()" class="hover:text-spideyRed">SUITS & REPLICAS</a>
+        <a href="#hoodies" onclick="toggleMobileMenu()" class="hover:text-spideyRed">THWIP HOODIES</a>
+        <a href="#streetwear" onclick="toggleMobileMenu()" class="hover:text-spideyRed">STREETWEAR</a>
+        <a href="#accessories" onclick="toggleMobileMenu()" class="hover:text-spideyRed">ACCESSORIES</a>
+        <a href="#bugle" onclick="toggleMobileMenu()" class="text-yellow-400">THE DAILY BUGLE</a>
+    </div>
+
+    <!-- HERO SECTION - THE MULTIVERSE PORTAL -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-12 px-4">
+        <!-- Interactive background glow -->
+        <div id="portal-glow" class="absolute w-[500px] h-[500px] rounded-full bg-spideyRed/20 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-1000"></div>
+        
+        <!-- Hanging Web -->
+        <div class="absolute top-0 right-10 w-24 h-64 border-r-2 border-white/20 border-dashed hidden md:block">
+            <div class="absolute bottom-0 right-[-6px] w-3 h-3 bg-white rounded-full animate-bounce"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <!-- Left Side: Comic Text & Action -->
+            <div class="space-y-6 text-center lg:text-left">
+                <!-- Badge -->
+                <span class="inline-block bg-yellow-400 text-black font-comic text-xl px-4 py-1.5 uppercase rotate-[-2deg] border-2 border-black comic-border-sm animate-pulse-slow">
+                    Official Stark Tech Partner!
+                </span>
+                
+                <h1 class="font-comic text-6xl md:text-8xl leading-none tracking-tight">
+                    THWIP YOUR <br class="hidden md:inline">
+                    <span class="text-spideyRed drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">STYLE</span> INTO 
+                    <span class="text-spideyBlue drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">GEAR!</span>
+                </h1>
+
+                <p class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 font-light">
+                    Gear up like the Spider-Hero you are. High-grade polymer suits, heavy-duty webbing hoodies, and multiversal street apparel built for swinging between dimensions.
+                </p>
+
+                <!-- Multiverse Suit Switcher Widget (Interactive) -->
+                <div class="p-6 bg-black/60 rounded-2xl border-4 border-black comic-border max-w-md mx-auto lg:mx-0">
+                    <p class="font-comic text-lg text-yellow-400 mb-3"><i class="fa-solid fa-wand-magic-sparkles"></i> SELECT YOUR UNIVERSE CLASS:</p>
+                    <div class="grid grid-cols-4 gap-2">
+                        <button onclick="switchSpidey('classic')" class="bg-spideyRed text-white py-2 rounded font-comic text-sm border-2 border-black hover:scale-105 active:scale-95 transition-all">CLASSIC</button>
+                        <button onclick="switchSpidey('symbiote')" class="bg-gray-900 text-white py-2 rounded font-comic text-sm border-2 border-white/30 hover:scale-105 active:scale-95 transition-all">SYMBIOTE</button>
+                        <button onclick="switchSpidey('miles')" class="bg-black text-spideyRed py-2 rounded font-comic text-sm border-2 border-spideyRed hover:scale-105 active:scale-95 transition-all">BROOKLYN</button>
+                        <button onclick="switchSpidey('gwen')" class="bg-white text-gwenPink py-2 rounded font-comic text-sm border-2 border-gwenTeal hover:scale-105 active:scale-95 transition-all">GHOST</button>
+                    </div>
+                </div>
+
+                <!-- Main CTA -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                    <a href="#suits" class="bg-spideyRed text-white px-8 py-4 text-2xl font-comic tracking-wider rounded border-4 border-black comic-border hover:bg-red-600 transition-all transform hover:-translate-y-1 text-center">
+                        EXPLORE THE SUITS
+                    </a>
+                    <a href="#streetwear" class="bg-spideyBlue text-white px-8 py-4 text-2xl font-comic tracking-wider rounded border-4 border-black comic-border-blue hover:bg-blue-700 transition-all transform hover:-translate-y-1 text-center">
+                        CASUAL STREETWEAR
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Spidey Interactive Hero Image -->
+            <div class="relative flex justify-center items-center">
+                <!-- Spiral Web background -->
+                <div class="absolute w-72 h-72 md:w-96 md:h-96 border-4 border-dashed border-spideyRed/20 rounded-full animate-spin-slow"></div>
+                <!-- Dynamic Spider-man Silhouette / Render Showcase -->
+                <div id="hero-img-container" class="relative group cursor-crosshair transform hover:scale-105 transition-transform duration-500">
+                    <img id="spidey-hero-img" src="https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&q=80&w=600" 
+                         alt="Spiderman Costume Red" 
+                         class="w-[320px] md:w-[450px] h-[400px] md:h-[550px] object-cover rounded-3xl border-4 border-black comic-border shadow-2xl transition-all duration-500">
+                    
+                    <!-- Floating Badge -->
+                    <div id="spidey-hero-badge" class="absolute -bottom-6 -left-6 bg-yellow-400 text-black px-6 py-3 font-comic text-2xl border-4 border-black rotate-[-6deg] animate-float">
+                        CLASSIC RED ON SALE!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: COMIC BOOK CATEGORIES (SKEWED GRID) -->
+    <section class="py-16 px-4 bg-spideyDarkBlue border-y-8 border-black relative">
+        <div class="absolute inset-0 bg-[radial-gradient(#000_20%,transparent_20%)] [background-size:16px_16px] opacity-30"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <h2 class="font-comic text-5xl md:text-7xl text-center mb-12 tracking-wide text-white drop-shadow-[4px_4px_0_rgba(0,0,0,1)]">
+                CHOOSE YOUR INSTINCT
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Suit Replica Panel -->
+                <div class="bg-spideyRed p-8 rounded-3xl border-4 border-black comic-border hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 font-comic text-4xl text-black opacity-30 group-hover:opacity-80 transition-opacity">01</div>
+                    <div class="space-y-4">
+                        <i class="fa-solid fa-mask text-5xl text-black"></i>
+                        <h3 class="font-comic text-3xl text-black">COSPLAY & SUITS</h3>
+                        <p class="text-white">Pro-level spandex, breathable, textured web pattern, detachable masks. Exactly like the movies.</p>
+                        <a href="#suits" class="inline-block bg-black text-white px-6 py-2 rounded font-comic text-lg hover:bg-neutral-800 transition-colors">GO SLINGING &rarr;</a>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-black/10 rounded-full"></div>
+                </div>
+
+                <!-- Casual Apparel Panel -->
+                <div class="bg-white p-8 rounded-3xl border-4 border-black comic-border-blue hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group text-black">
+                    <div class="absolute top-0 right-0 p-4 font-comic text-4xl text-spideyBlue opacity-30 group-hover:opacity-80 transition-opacity">02</div>
+                    <div class="space-y-4">
+                        <i class="fa-solid fa-shirt text-5xl text-spideyBlue"></i>
+                        <h3 class="font-comic text-3xl text-spideyBlue">PETER PARKER DAILY WEAR</h3>
+                        <p class="text-gray-700">Comfy hoodies, graphic tees, high-top sneakers, and dynamic bomber jackets for normal days.</p>
+                        <a href="#streetwear" class="inline-block bg-spideyBlue text-white px-6 py-2 rounded font-comic text-lg hover:bg-blue-800 transition-colors">THWIP SQUAD &rarr;</a>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-spideyBlue/10 rounded-full"></div>
+                </div>
+
+                <!-- Web Shooters Panel -->
+                <div class="bg-yellow-400 p-8 rounded-3xl border-4 border-black comic-border hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden group text-black">
+                    <div class="absolute top-0 right-0 p-4 font-comic text-4xl text-black opacity-30 group-hover:opacity-80 transition-opacity">03</div>
+                    <div class="space-y-4">
+                        <i class="fa-solid fa-bolt text-5xl text-black"></i>
+                        <h3 class="font-comic text-3xl text-black">ARACHNO-GADGETS</h3>
+                        <p class="text-gray-800">Mock web-shooters, spider-drones, glowing display lamps, action figures, and phone mounts.</p>
+                        <a href="#accessories" class="inline-block bg-black text-white px-6 py-2 rounded font-comic text-lg hover:bg-neutral-800 transition-colors">GEAR UP &rarr;</a>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 w-32 h-32 bg-black/10 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE MAIN SUIT SHOWCASE -->
+    <section id="suits" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between items-center mb-12 gap-4">
+            <div>
+                <h2 class="font-comic text-5xl md:text-7xl text-spideyRed drop-shadow-[3px_3px_0_rgba(255,255,255,1)]">OFFICIAL SUIT REPLICAS</h2>
+                <p class="text-gray-400 mt-2">Engineered with multi-stretch technology and synthetic mesh overlays.</p>
+            </div>
+            <!-- Filter badges -->
+            <div class="flex gap-2 flex-wrap">
+                <span class="bg-spideyRed text-white font-comic px-4 py-2 rounded border-2 border-black cursor-pointer hover:scale-105 transition-all">ALL REPLICAS</span>
+                <span class="bg-black text-white font-comic px-4 py-2 rounded border-2 border-white/20 cursor-pointer hover:border-spideyRed hover:scale-105 transition-all">STARK TECH</span>
+                <span class="bg-black text-white font-comic px-4 py-2 rounded border-2 border-white/20 cursor-pointer hover:border-spideyRed hover:scale-105 transition-all">VINTAGE COMICS</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Product Card 1 -->
+            <div class="bg-black rounded-3xl border-4 border-black comic-border overflow-hidden group flex flex-col justify-between">
+                <div class="relative overflow-hidden h-[380px]">
+                    <span class="absolute top-4 left-4 bg-spideyRed text-white px-3 py-1 font-comic text-lg rounded-md z-10">BEST SELLER</span>
+                    <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80&w=500" alt="Classic Spidey Suit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-comic text-3xl tracking-wide">CLASSIC IN-GAME SUIT v1.0</h3>
+                            <p class="text-gray-400 text-sm">Poly-Spandex blend with synthetic soles</p>
+                        </div>
+                        <span class="font-comic text-3xl text-yellow-400">$189.99</span>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex gap-1 text-yellow-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <button onclick="addToCart('Classic Suit', 189.99, event)" class="w-full bg-spideyRed text-white py-3 font-comic text-2xl tracking-widest border-2 border-black rounded-lg hover:bg-red-600 transition-colors active:scale-95 transform">
+                        THWIP TO CART
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="bg-black rounded-3xl border-4 border-black comic-border overflow-hidden group flex flex-col justify-between">
+                <div class="relative overflow-hidden h-[380px]">
+                    <span class="absolute top-4 left-4 bg-purple-600 text-white px-3 py-1 font-comic text-lg rounded-md z-10">SYMBIOTE VIBES</span>
+                    <img src="https://images.unsplash.com/photo-1608889174637-3c44f6326f60?auto=format&fit=crop&q=80&w=500" alt="Symbiote Suit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-comic text-3xl tracking-wide">ORGANIC SYMBIOTE SHEATH</h3>
+                            <p class="text-gray-400 text-sm">Adaptive fit, wet-look venom finish</p>
+                        </div>
+                        <span class="font-comic text-3xl text-yellow-400">$210.00</span>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex gap-1 text-yellow-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <button onclick="addToCart('Symbiote Suit', 210.00, event)" class="w-full bg-black text-white py-3 font-comic text-2xl tracking-widest border-2 border-white rounded-lg hover:bg-neutral-900 transition-colors active:scale-95 transform">
+                        THWIP TO CART
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="bg-black rounded-3xl border-4 border-black comic-border overflow-hidden group flex flex-col justify-between">
+                <div class="relative overflow-hidden h-[380px]">
+                    <span class="absolute top-4 left-4 bg-gwenPink text-white px-3 py-1 font-comic text-lg rounded-md z-10">MULTIVERSE EXCLUSIVE</span>
+                    <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=500" alt="Ghost Spider Suit" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <div class="p-6 space-y-4">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-comic text-3xl tracking-wide">SPIDER-GWEN STEALTH SUIT</h3>
+                            <p class="text-gray-400 text-sm">Built-in inner hood, lightweight knit</p>
+                        </div>
+                        <span class="font-comic text-3xl text-yellow-400">$195.00</span>
+                    </div>
+                    <!-- Stars -->
+                    <div class="flex gap-1 text-yellow-400">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <button onclick="addToCart('Spider-Gwen Suit', 195.00, event)" class="w-full bg-gwenPink text-black py-3 font-comic text-2xl tracking-widest border-2 border-black rounded-lg hover:opacity-90 transition-colors active:scale-95 transform">
+                        THWIP TO CART
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: THWIP HOODIES & STREETWEAR -->
+    <section id="hoodies" class="py-20 px-4 bg-zinc-950 border-t-8 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-comic text-5xl md:text-7xl text-yellow-400 inline-block rotate-[-1deg] border-4 border-black bg-black px-6 py-2 comic-border">
+                    CASUAL THWIP WEAR
+                </h2>
+                <p class="text-gray-400 mt-4 text-lg">You don't need a super-suit to look like a superhero.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="streetwear">
+                <!-- Hoodie Item -->
+                <div class="bg-neutral-900 rounded-2xl border-4 border-black comic-border-sm p-4 hover:scale-105 transition-all flex flex-col justify-between">
+                    <div class="relative overflow-hidden rounded-xl h-64 bg-black">
+                        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=400" alt="Spidey Red Hoodie" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-spideyRed text-white font-comic px-2 py-0.5 rounded text-sm">THWIP SQUAD</span>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <h4 class="font-comic text-xl">Arachno-Tech Pullover</h4>
+                        <p class="text-gray-400 text-xs">Oversized fit, heavy drop-shoulder feel.</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-comic text-yellow-400">$69.00</span>
+                            <button onclick="addToCart('Arachno Pullover', 69.00, event)" class="bg-spideyBlue text-white px-3 py-1 rounded font-comic hover:bg-spideyRed transition-colors">THWIP IT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- T-Shirt Item -->
+                <div class="bg-neutral-900 rounded-2xl border-4 border-black comic-border-sm p-4 hover:scale-105 transition-all flex flex-col justify-between">
+                    <div class="relative overflow-hidden rounded-xl h-64 bg-black">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&q=80&w=400" alt="Miles Morales Tee" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-black text-spideyRed font-comic px-2 py-0.5 rounded text-sm">BROOKLYN</span>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <h4 class="font-comic text-xl">Miles Graffiti Tee</h4>
+                        <p class="text-gray-400 text-xs">100% Ring-spun combat cotton.</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-comic text-yellow-400">$35.00</span>
+                            <button onclick="addToCart('Miles Graffiti Tee', 35.00, event)" class="bg-spideyBlue text-white px-3 py-1 rounded font-comic hover:bg-spideyRed transition-colors">THWIP IT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bomber Jacket -->
+                <div class="bg-neutral-900 rounded-2xl border-4 border-black comic-border-sm p-4 hover:scale-105 transition-all flex flex-col justify-between">
+                    <div class="relative overflow-hidden rounded-xl h-64 bg-black">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&q=80&w=400" alt="Spidey Bomber Jacket" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-yellow-400 text-black font-comic px-2 py-0.5 rounded text-sm">LIMITED</span>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <h4 class="font-comic text-xl">Daily Bugle Press Jacket</h4>
+                        <p class="text-gray-400 text-xs">Waterproof shell, vintage print inner liner.</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-comic text-yellow-400">$120.00</span>
+                            <button onclick="addToCart('Press Bomber Jacket', 120.00, event)" class="bg-spideyBlue text-white px-3 py-1 rounded font-comic hover:bg-spideyRed transition-colors">THWIP IT</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spidey High-Tops -->
+                <div class="bg-neutral-900 rounded-2xl border-4 border-black comic-border-sm p-4 hover:scale-105 transition-all flex flex-col justify-between">
+                    <div class="relative overflow-hidden rounded-xl h-64 bg-black">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=400" alt="Spidey Kicks" class="w-full h-full object-cover">
+                        <span class="absolute top-2 right-2 bg-gwenPink text-white font-comic px-2 py-0.5 rounded text-sm">HOT DROP</span>
+                    </div>
+                    <div class="mt-4 space-y-2">
+                        <h4 class="font-comic text-xl">Multiverse High-Tops</h4>
+                        <p class="text-gray-400 text-xs">Padded ankle guards, custom spider web tread.</p>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-comic text-yellow-400">$145.00</span>
+                            <button onclick="addToCart('Multiverse High-Tops', 145.00, event)" class="bg-spideyBlue text-white px-3 py-1 rounded font-comic hover:bg-spideyRed transition-colors">THWIP IT</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: DAILY BUGLE TESTIMONIALS (FUNNY COMIC REVIEWS) -->
+    <section id="bugle" class="py-20 px-4 bg-yellow-400 text-black border-y-8 border-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center gap-4 justify-center mb-12">
+                <div class="border-4 border-black bg-black text-white p-4 font-comic text-4xl rotate-[-3deg] uppercase">
+                    THE DAILY BUGLE
+                </div>
+                <h2 class="font-comic text-4xl md:text-6xl tracking-wide uppercase">OPINIONS & REVIEWS!</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl border-4 border-black comic-border flex flex-col justify-between relative">
+                    <p class="italic text-lg z-10 relative">
+                        "THESE HOODIES ARE A MENACE TO MY BLOOD PRESSURE! My son bought one, and now he is jumping over the dining table claiming he has 'web swing' capabilities! EXCELLENT FABRIC QUALITY, YET TOTALLY OUTRAGEOUS!"
+                    </p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white font-bold font-comic">JJ</div>
+                        <div>
+                            <h4 class="font-comic text-xl leading-none">J. Jonah Jameson</h4>
+                            <span class="text-xs text-red-600 font-bold">ANGRY PUBLISHER</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl border-4 border-black comic-border flex flex-col justify-between relative">
+                    <p class="italic text-lg z-10 relative">
+                        "Honestly... it fits perfectly under my... regular civilian clothes. It stretches exactly the way you need it to, and the ventilation keeps you cool even when climbing tall brick walls in Queens."
+                    </p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-spideyRed flex items-center justify-center text-white font-bold font-comic">PP</div>
+                        <div>
+                            <h4 class="font-comic text-xl leading-none">Peter P.</h4>
+                            <span class="text-xs text-spideyBlue font-bold">FREELANCE PHOTOGRAPHER</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-3xl border-4 border-black comic-border flex flex-col justify-between relative">
+                    <p class="italic text-lg z-10 relative">
+                        "The graffiti hoodie goes hard. The spray paint drip graphic is so clean. Walked through Brooklyn and got styled checked by three different universes' Spideys. 10/10 swagger!"
+                    </p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-black flex items-center justify-center text-spideyRed font-bold font-comic">MM</div>
+                        <div>
+                            <h4 class="font-comic text-xl leading-none">Miles M.</h4>
+                            <span class="text-xs text-purple-600 font-bold">STREET ARTIST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOPPING CART SLIDE OVER (MOCK INTERACTIVE) -->
+    <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-full max-w-md bg-symbioteBlack border-l-4 border-black transform translate-x-full transition-transform duration-300 z-50 flex flex-col shadow-2xl">
+        <div class="p-6 bg-spideyRed border-b-4 border-black flex justify-between items-center text-black">
+            <h3 class="font-comic text-3xl tracking-wide"><i class="fa-solid fa-spider"></i> SPIDEY HAUL</h3>
+            <button onclick="toggleCart()" class="text-2xl"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        
+        <!-- Cart Items Container -->
+        <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-list">
+            <!-- Simulated item 1 -->
+            <div class="flex gap-4 bg-black/40 p-3 rounded-lg border-2 border-white/10 items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-16 h-16 bg-neutral-900 rounded overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80&w=150" alt="product" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h5 class="font-comic text-lg">Classic Suit v1.0</h5>
+                        <p class="text-xs text-yellow-400">$189.99</p>
+                    </div>
+                </div>
+                <button class="text-red-500 hover:text-red-700"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+
+        <div class="p-6 border-t-4 border-black bg-black space-y-4">
+            <div class="flex justify-between items-center font-comic text-2xl">
+                <span>TOTAL:</span>
+                <span class="text-yellow-400" id="cart-total-price">$189.99</span>
+            </div>
+            <button onclick="alert('YOUR SUIT IS CURRENTLY BEING WEBBED UP FOR SHIPPING!')" class="w-full bg-spideyRed text-white font-comic text-2xl py-4 rounded-lg border-2 border-black hover:bg-red-600 transition-colors">
+                PROCEED TO THWIP-CHECKOUT &rarr;
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 px-4 border-t-8 border-spideyRed text-gray-400">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <span class="font-comic text-3xl text-spideyRed block">SPIDER-SHOP</span>
+                <p class="text-sm">Not affiliated with Oscorp Industries or Stark Enterprises. Wear with high responsibility.</p>
+                <div class="flex gap-4 text-xl">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-threads"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-comic text-white text-xl mb-4">SUIT UP WITH US</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Track Your Web Shipment</a></li>
+                    <li><a href="#" class="hover:underline">Oscorp Tech Return Policy</a></li>
+                    <li><a href="#" class="hover:underline">Multiverse Sizing Chart</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-comic text-white text-xl mb-4">UNIVERSE DEPTS</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Earth-616 Classic Wear</a></li>
+                    <li><a href="#" class="hover:underline">Earth-1610 Street Apparel</a></li>
+                    <li><a href="#" class="hover:underline">Earth-65 Neon Punk</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-comic text-white text-xl">SUBSCRIBE FOR SPIDEY-ALERT DEALS</h4>
+                <div class="flex">
+                    <input type="email" placeholder="Your Spidey Email" class="bg-neutral-800 text-white px-3 py-2 rounded-l focus:outline-none w-full text-sm">
+                    <button class="bg-spideyRed text-white px-4 py-2 rounded-r font-comic hover:bg-red-600">THWIP!</button>
+                </div>
+                <p class="text-xs text-gray-600">We don't spam. J. Jonah Jameson wouldn't allow it.</p>
+            </div>
+        </div>
+        <div class="text-center mt-12 pt-8 border-t border-neutral-900 text-xs">
+            <p>&copy; 2025 SPIDER-SHOP INC. ALL MULTIVERSE RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT & SPECIAL SPIDEY FX -->
+    <script>
+        // Interactive "THWIP!" click effect
+        document.body.addEventListener('click', function(e) {
+            // Only trigger if clicked on generic elements, or buttons
+            if (e.target.tagName === 'BUTTON' || e.target.tagName === 'A' || Math.random() > 0.4) {
+                const words = ["THWIP!", "SPLAT!", "BOOM!", "ZIP!", "WHACK!"];
+                const randomWord = words[Math.floor(Math.random() * words.length)];
+                
+                const particle = document.createElement('span');
+                particle.innerText = randomWord;
+                particle.className = 'thwip-particle text-spideyRed drop-shadow-[2px_2px_0px_#000]';
+                
+                // Color variety for other variants
+                if (randomWord === "THWIP!") {
+                    particle.style.color = '#e21b22'; // Spidey Red
+                } else {
+                    particle.style.color = '#ff007f'; // Gwen Pink or Blue
+                }
+                
+                particle.style.left = `${e.pageX}px`;
+                particle.style.top = `${e.pageY}px`;
+                
+                document.body.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 800);
+            }
+        });
+
+        // Multiverse Accent Switcher Logic
+        function switchSpidey(variant) {
+            const heroImg = document.getElementById('spidey-hero-img');
+            const portalGlow = document.getElementById('portal-glow');
+            const heroBadge = document.getElementById('spidey-hero-badge');
+
+            if (variant === 'classic') {
+                heroImg.src = "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?auto=format&fit=crop&q=80&w=600";
+                portalGlow.className = "absolute w-[500px] h-[500px] rounded-full bg-spideyRed/20 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-1000";
+                heroBadge.innerText = "CLASSIC RED ON SALE!";
+                heroBadge.style.backgroundColor = "#fbbf24"; // yellow-400
+                heroBadge.style.color = "#000000";
+            } else if (variant === 'symbiote') {
+                heroImg.src = "https://images.unsplash.com/photo-1608889174637-3c44f6326f60?auto=format&fit=crop&q=80&w=600";
+                portalGlow.className = "absolute w-[500px] h-[500px] rounded-full bg-indigo-900/30 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-1000";
+                heroBadge.innerText = "FEEL THE POWER!";
+                heroBadge.style.backgroundColor = "#000000";
+                heroBadge.style.color = "#ffffff";
+            } else if (variant === 'miles') {
+                heroImg.src = "https://images.unsplash.com/photo-1620072517234-19d977381d4a?auto=format&fit=crop&q=80&w=600";
+                portalGlow.className = "absolute w-[500px] h-[500px] rounded-full bg-red-800/35 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-1000";
+                heroBadge.innerText = "BROOKLYN FLAVOR!";
+                heroBadge.style.backgroundColor = "#e21b22";
+                heroBadge.style.color = "#ffffff";
+            } else if (variant === 'gwen') {
+                heroImg.src = "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=600";
+                portalGlow.className = "absolute w-[500px] h-[500px] rounded-full bg-gwenPink/20 blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-colors duration-1000";
+                heroBadge.innerText = "GHOST-SPIDER EXCLUSIVE!";
+                heroBadge.style.backgroundColor = "#ff007f";
+                heroBadge.style.color = "#ffffff";
+            }
+        }
+
+        // Cart Drawer logic
+        let cartItems = [
+            { name: "Classic Suit v1.0", price: 189.99, image: "https://images.unsplash.com/photo-1635805737707-575885ab0820?auto=format&fit=crop&q=80&w=150" }
+        ];
+
+        function toggleCart() {
+            const sidebar = document.getElementById('cart-sidebar');
+            sidebar.classList.toggle('translate-x-full');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function addToCart(name, price, event) {
+            // Push to cart array
+            cartItems.push({ name, price, image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&q=80&w=150" });
+            updateCartUI();
+            
+            // Highlight cart icon
+            const badge = document.getElementById('cart-count');
+            badge.classList.add('scale-150', 'bg-red-500');
+            setTimeout(() => {
+                badge.classList.remove('scale-150', 'bg-red-500');
+            }, 300);
+        }
+
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-items-list');
+            const totalEl = document.getElementById('cart-total-price');
+            const countEl = document.getElementById('cart-count');
+
+            countEl.innerText = cartItems.length;
+
+            if (cartItems.length === 0) {
+                list.innerHTML = `<div class="text-center py-12 text-gray-500 font-comic text-xl">YOUR BAG IS EMPTY! GO CRIME FIGHTING!</div>`;
+                totalEl.innerText = "$0.00";
+                return;
+            }
+
+            list.innerHTML = "";
+            let total = 0;
+            cartItems.forEach((item, index) => {
+                total += item.price;
+                list.innerHTML += `
+                    <div class="flex gap-4 bg-black/40 p-3 rounded-lg border-2 border-white/10 items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-16 h-16 bg-neutral-900 rounded overflow-hidden">
+                                <img src="${item.image}" alt="product" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h5 class="font-comic text-lg text-white">${item.name}</h5>
+                                <p class="text-xs text-yellow-400">$${item.price.toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                `;
+            });
+            totalEl.innerText = `$${total.toFixed(2)}`;
+        }
+
+        // Initialize UI
+        updateCartUI();
+    </script>
+</body>
+</html>
+        </body>
+        </html>
+      
